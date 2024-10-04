@@ -19,57 +19,71 @@ main {
   align-items: center;
 }
 
+img {
+  border: 5px;
+  border-radius: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 0 2px black;
+}
 
 /*CSS for Text*/
 
-p, ul, h3, h2, li{
+p, ul, h3, h2, li, textarea{
   font-family: "Arial", "Helvetica", "sans-serif";
   font-size: 18;
   -webkit-text-fill-color: rgb(255, 255, 255);
   /* shadow */
   text-shadow: 0px 0px 15px rgb(0, 0, 0);
+  margin: 1px 5px 10px 20px;
 }
-a:hover{
-    font-family: "Arial", "Helvetica", "sans-serif";
-    font-size: 18;
-    -webkit-text-fill-color: rgb(255, 255, 255);
-    /* shadow */
-    text-shadow: 0px 0px 15px rgb(75, 12, 40);
+a:hover {
+  font-family: "Arial", "Helvetica", "sans-serif";
+  font-size: 18;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  /* shadow */
+  text-shadow: 0px 0px 15px rgb(75, 12, 40);
 
-    /* text gradient */
-    background: -webkit-repeating-linear-gradient(rgb(187, 95, 152),rgb(255,255,255));
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    /* text outline */
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
-  }
-
-a {
-    font-family: "Arial", "Helvetica", "sans-serif";
-    font-size: 18;
-    -webkit-text-fill-color: rgb(255, 255, 255);
-    /* shadow */
-    text-shadow: 0px 0px 15px rgb(75, 12, 40);
-
-
-    /* text outline */
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: rgb(219, 42, 210);
-  }
-
-
-
-h1{
-  font-style: bold;
-  
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   /* text gradient */
-  background: -webkit-repeating-linear-gradient(rgb(164, 105, 141),rgb(255,255,255));
+  background: -webkit-repeating-linear-gradient(
+    rgb(187, 95, 152),
+    rgb(255, 255, 255)
+  );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 
+  /* text outline */
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+a {
+  font-family: "Arial", "Helvetica", "sans-serif";
+  font-size: 18;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  /* shadow */
+  text-shadow: 0px 0px 15px rgb(75, 12, 40);
+
+  /* text outline */
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgb(219, 42, 210);
+}
+
+h1 {
+  font-style: bold;
+
+  margin-left: 5px;
+
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /* text gradient */
+  background: -webkit-repeating-linear-gradient(
+    rgb(164, 105, 141),
+    rgb(255, 255, 255)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   /* text outline */
   -webkit-text-stroke-width: 1px;
@@ -77,22 +91,69 @@ h1{
 }
 /* CSS for navigation bar */
 
+.about-text, .project-details{
+  margin-top: 10px;
+  background-color: rgba(102, 0, 255,0.2);
+  border-radius: 5px;
+  border-color: blueviolet;
+  border: 2px, solid;
+  text-align: center;
+}
+
+.blog-section{
+  margin-top: 10px;
+  background-color: rgba(102, 0, 255,0.2);
+  border-radius: 5px;
+  border-color: blueviolet;
+  border: 2px, solid;
+  text-align: left;
+  padding:10px;
+}
+
+form{
+  margin-top: 10px;
+  background-color: rgba(102, 0, 255,0.2);
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 5px;
+
+  border-color: blueviolet;
+  border: 2px, solid;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+textarea{
+  margin-top: auto;
+  align-self: auto;
+  vertical-align: bottom;
+  bottom:-10px;
+  position:relative;
+}
+
+
+
+
 .navbar {
   position: -webkit-sticky;
-  position: sticky;
   top: 0;
   width: 100%;
-  height: 7%;
+  height: 40px;
   z-index: 10;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  border-style:solid;
+  border-color: black;
 
-  background-color: rgb(198, 96, 177);
-  color: white;
+  background-color: rgba(203, 35, 158, 0.1);
   padding: 0px 0px;
+
+  color: rgb(166, 65, 65);
 
   /* Debug border */
   /* border: solid red; */
@@ -102,7 +163,8 @@ h1{
   display: flex;
   flex-direction: row;
   position: relative;
-  right: 30px;
+  right: 25px;
+  top:10px;
   list-style: none;
 }
 
@@ -111,20 +173,25 @@ h1{
   font-weight: bold;
   margin: 0 12px;
   text-decoration: none;
-  display:flex;
+  display: flex;
   letter-spacing: 2px;
 }
 
 /* CSS for page footer */
 
-.footer {
+footer{
+
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: rgb(0, 0, 0);
-  color: white;
+  
+  vertical-align: middle;
+
+  text-align: center;
+
+  color: rgb(255, 255, 255);
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;
+  height: 2rem;
 }
